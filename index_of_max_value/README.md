@@ -39,7 +39,7 @@ Use `numpy.argmax()`
 ### Test on small list
 `In [17]: small_list = [random.random for i in range(100)]`
 
-```
+```python
 In [34]: %timeit native_solution(small_list)
 100000 loops, best of 3: 5.28 µs per loop
 
@@ -57,6 +57,24 @@ In [41]: small_array = np.array(small_list)
 In [43]: %timeit numpy_solution(small_array)
 The slowest run took 12.68 times longer than the fastest. This could mean that an intermediate result is being cached.
 1000000 loops, best of 3: 1.54 µs per loop
+```
+
+
+### Test on small list
+`In [44]: big_list = [random.random() for i in range(1000000)]`
+
+```python
+In [47]: %timeit native_solution(big_list)
+10 loops, best of 3: 65.9 ms per loop
+
+In [49]: %timeit built_in_solution(big_list)
+10 loops, best of 3: 31.8 ms per loop
+
+In [50]: %timeit numpy_solution(big_list)
+10 loops, best of 3: 32.9 ms per loop
+
+In [51]: %timeit numpy_solution(big_array)
+1000 loops, best of 3: 768 µs per loop
 ```
 
 
