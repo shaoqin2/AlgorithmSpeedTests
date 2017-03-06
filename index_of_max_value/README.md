@@ -60,7 +60,7 @@ The slowest run took 12.68 times longer than the fastest. This could mean that a
 ```
 
 
-### Test on small list
+### Test on big list
 `In [44]: big_list = [random.random() for i in range(1000000)]`
 
 ```python
