@@ -36,7 +36,7 @@ def intuitive(l):
     return max_index
 
 intuitive([1, 2, 3, 4, 5, 6, 7, 8, 9, 6, 2, 7])
-    ''', number = 100000))
+    ''', number = 1000000))
 
     print(timeit.timeit('''
 def built_in_max_index(l):
@@ -44,4 +44,12 @@ def built_in_max_index(l):
     return l.index(max_value)
     
 built_in_max_index([1, 2, 3, 4, 5, 6, 7, 8, 9, 6, 2, 7])
-    ''', number = 100000))
+    ''', number = 1000000))
+
+    print(timeit.timeit('''
+def numpy_argmax(l):
+    import numpy as np
+    return np.argmax(l)
+    
+numpy_argmax([1, 2, 3, 4, 5, 6, 7, 8, 9, 6, 2, 7])
+    ''', number = 1000000))
