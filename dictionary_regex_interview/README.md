@@ -21,3 +21,7 @@ Example out:
  ### Result
 
 
+```python
+In [30]: short_string = "aaaaaabbbbcccddddeeeeeeeeeeeeeeeeeeeeeeee"
+
+```
